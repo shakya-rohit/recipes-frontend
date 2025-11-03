@@ -1,0 +1,24 @@
+<div class="search-container">
+  <input type="text" [(ngModel)]="query" (input)="onSearchChange(query)" placeholder="Search recipes..."
+    class="search-input" />
+  
+  <!-- Hint shown when user hasn't typed enough -->
+  <p *ngIf="!query || query.length < 3" class="hint">
+    Type at least <strong>3</strong> characters to search...
+  </p>
+
+  <!-- Suggestions list -->
+  <ul class="suggestions" *ngIf="recipes.length > 0">
+    <li *ngFor="let r of recipes" (click)="openDetails(r)">
+      <img [src]="r.image" alt="{{r.name}}" width="40" height="40">
+      <div class="details">
+        <div class="line1">
+          <strong>{{ r.id }}</strong>&nbsp;&nbsp;
+          <span [innerHTML]="r.highlightedName || r.name"></span>
+        </div>
+        <small [innerHTML]="r.highlightedCuisine || r.cuisine"></small>
+      </div>
+    </li>
+  </ul>
+
+</div>

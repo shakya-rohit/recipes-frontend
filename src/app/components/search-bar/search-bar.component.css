@@ -1,0 +1,95 @@
+.search-container {
+  width: 420px;
+  margin: 20px auto;
+  position: relative;
+}
+
+/* Search input */
+.search-input {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  font-size: 0.95rem;
+}
+
+/* Dropdown list */
+.suggestions {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-top: none;
+  max-height: 300px;
+  overflow-y: auto;
+  border-radius: 0 0 8px 8px;
+  z-index: 999;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Each suggestion item */
+.suggestions li {
+  display: flex;
+  align-items: center;
+  padding: 8px 10px;
+  gap: 10px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.suggestions li:hover {
+  background: #f9f9f9;
+}
+
+/* Recipe image */
+.suggestions img {
+  flex-shrink: 0;
+  border-radius: 6px;
+  object-fit: cover;
+  width: 42px;
+  height: 42px;
+}
+
+/* Recipe details */
+.details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  line-height: 1.2;
+}
+
+.line1 {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+}
+
+.line1 strong {
+  color: #666;
+  font-weight: 500;
+  font-size: 0.85rem;
+}
+
+.details span {
+  font-size: 0.95rem;
+  color: #222;
+}
+
+.details small {
+  font-size: 0.8rem;
+  color: #666;
+}
+
+/* Hint text */
+.hint {
+  text-align: center;
+  color: #888;
+  font-size: 0.9rem;
+  margin-top: 8px;
+}

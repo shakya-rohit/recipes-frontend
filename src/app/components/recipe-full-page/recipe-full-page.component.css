@@ -1,0 +1,121 @@
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+/* Hero Section */
+.hero-section {
+  position: relative;
+  height: 420px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.6));
+}
+
+.hero-text {
+  position: absolute;
+  bottom: 24px;
+  left: 24px;
+  color: #fff;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+.hero-text h1 {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.hero-text .cuisine {
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+/* Back Button */
+.back-btn {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  background: rgba(0, 0, 0, 0.4);
+  color: #fff;
+  border-radius: 50%;
+  transition: all 0.2s ease;
+}
+
+.back-btn:hover {
+  background: rgba(0, 0, 0, 0.6);
+  transform: scale(1.1);
+}
+
+/* Content */
+.content-section {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.info-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 6px 0;
+  color: #333;
+}
+
+.section {
+  padding: 20px;
+}
+
+.section h2 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  color: #3f51b5;
+}
+
+.section ul,
+.section ol {
+  margin: 0;
+  padding-left: 20px;
+  color: #444;
+  line-height: 1.6;
+}
+
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .hero-section {
+    height: 280px;
+  }
+  .hero-text h1 {
+    font-size: 1.4rem;
+  }
+  .content-section {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

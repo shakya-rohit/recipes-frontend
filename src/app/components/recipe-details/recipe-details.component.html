@@ -1,0 +1,48 @@
+<mat-card class="recipe-card">
+    <div class="image-wrapper">
+        <img mat-card-image [src]="recipe.image" alt="{{ recipe.name }}" class="recipe-image" />
+        <div class="image-overlay"></div>
+
+        <!-- title overlay on the image (keeps it readable thanks to overlay) -->
+        <div class="title-overlay">
+            <div class="title-inner">
+                <h2>{{ recipe.name }}</h2>
+            </div>
+        </div>
+
+        <!-- Top-right icon button -->
+        <button mat-icon-button class="open-details-btn" (click)="openFullDetails($event)">
+            <mat-icon>open_in_new</mat-icon>
+        </button>
+    </div>
+
+    <mat-card-content class="card-content">
+        <div class="info-grid">
+            <div class="info-item">
+                <mat-icon class="info-icon">public</mat-icon>
+                <div class="info-text"><strong>Cuisine:</strong> {{ recipe.cuisine }}</div>
+            </div>
+
+            <div class="info-item">
+                <mat-icon class="info-icon">schedule</mat-icon>
+                <div class="info-text"><strong>Prep Time:</strong> {{ recipe.prepTimeMinutes }} min</div>
+            </div>
+
+            <div class="info-item">
+                <mat-icon class="info-icon">restaurant_menu</mat-icon>
+                <div class="info-text"><strong>Cook Time:</strong> {{ recipe.cookTimeMinutes }} min</div>
+            </div>
+
+            <div class="info-item">
+                <mat-icon class="info-icon" color="warn">local_fire_department</mat-icon>
+                <div class="info-text"><strong>Calories:</strong> {{ recipe.caloriesPerServing }}</div>
+            </div>
+        </div>
+    </mat-card-content>
+
+    <mat-divider></mat-divider>
+
+    <mat-card-actions align="end">
+        <button mat-stroked-button color="primary" (click)="close()">Close</button>
+    </mat-card-actions>
+</mat-card>
