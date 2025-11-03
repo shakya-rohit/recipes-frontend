@@ -1,27 +1,119 @@
-# RecipesFrontend
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.1.
+# 🍽️ Recipes Finder - Angular Frontend
 
-## Development server
+This is the **frontend UI** for the *Recipes Finder App*, built using **Angular** and **Angular Material**.  
+It allows users to **search recipes**, view **suggestions dynamically** (typeahead), and open a **modal or full-page view** for recipe details.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+---
 
-## Code scaffolding
+## 🚀 Features
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- 🔍 **Dynamic search bar** with typeahead and debounce (min 3 characters)
+- ✨ **Highlighted search results** (fuzzy full-text search)
+- 💡 **Responsive UI** with Angular Material components
+- 📜 **Recipe details modal** with clean overlay design
+- 🧭 **Full-page view** for extended recipe details
+- ⚡ Smooth animations and subtle UI effects
 
-## Build
+---
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## 🏗️ Tech Stack
 
-## Running unit tests
+| Layer | Technology |
+|-------|-------------|
+| Framework | Angular 17 |
+| UI Components | Angular Material |
+| Styling | CSS3 (custom responsive layout) |
+| Communication | REST API (Spring Boot backend) |
+| Data Handling | RxJS + Observables |
+| Build Tool | Angular CLI |
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+---
 
-## Running end-to-end tests
+## ⚙️ Setup & Run Locally
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+### 1️⃣ Clone the repository
+```bash
+git clone https://github.com/shakya-rohit/recipes-frontend.git
+cd recipes-frontend
+```
 
-## Further help
+### 2️⃣ Install dependencies
+```bash
+npm install
+```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+### 3️⃣ Run the Angular app
+```bash
+ng serve
+```
+
+Then open: [http://localhost:4200](http://localhost:4200)
+
+---
+
+## 🌐 API Integration
+
+The app connects to the backend service:  
+➡️ **[Recipes API - Spring Boot Backend](https://github.com/shakya-rohit/recipes-backend)**
+
+Ensure your backend is running on port `8080` before starting the frontend.
+
+---
+
+## 🧩 Key Components
+
+| Component | Description |
+|------------|-------------|
+| `search-bar` | Search bar with auto-suggestions and fuzzy matching |
+| `recipe-details` | Modal component displaying recipe details |
+| `recipe-full-page` | Full-page recipe view with additional info |
+| `recipe.service.ts` | Handles communication with backend API |
+
+---
+
+## 🎨 UI Preview
+
+### 🔍 Search Bar with Suggestions
+Displays dropdown results after typing at least 3 characters.
+
+### 🧾 Recipe Details Modal
+Shows recipe name, cuisine, and nutritional details with a clean overlay and “Close” button.
+
+### 🖥️ Full Page View
+Expands recipe details with ingredients and instructions.
+
+---
+
+## 📁 Project Structure
+
+```
+src/app
+├── components/
+│   ├── search-bar/          → Search bar with typeahead
+│   ├── recipe-details/      → Modal view for recipes
+│   ├── recipe-full-page/    → Dedicated recipe page
+├── services/
+│   └── recipe.service.ts    → API communication layer
+├── models/
+│   └── recipe.model.ts      → Recipe type definition
+└── app.module.ts            → Module configuration
+```
+
+---
+
+## 🔗 Backend API Endpoints Used
+
+| Method | Endpoint | Purpose |
+|---------|-----------|----------|
+| `GET` | `/api/recipes/search?query=` | Fetch filtered recipes |
+| `GET` | `/api/recipes/{id}` | Fetch details of a single recipe |
+
+---
+
+## 💅 Design Highlights
+
+- Modern, minimal interface using Material Design principles  
+- Debounced search ensures efficient API calls  
+- Responsive layout — works on desktop & mobile  
+- Smooth transitions between modal and full-page view
