@@ -1,4 +1,4 @@
-import { Component, HostListener } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { RecipeService } from '../../services/recipe.service';
 import { of, Subject, debounceTime, distinctUntilChanged, switchMap } from 'rxjs';
 import { MatDialog } from '@angular/material/dialog';
@@ -10,7 +10,7 @@ import { Recipe } from 'src/app/models/recipe.model';
   templateUrl: './search-bar.component.html',
   styleUrls: ['./search-bar.component.css']
 })
-export class SearchBarComponent {
+export class SearchBarComponent implements OnInit {
   query = '';
   recipes: Recipe[] = [];
   selectedIndex = -1; // track highlighted recipe
@@ -30,7 +30,19 @@ export class SearchBarComponent {
     ).subscribe(data => {
       this.recipes = data;
       this.selectedIndex = -1; // reset selection after new search
+
+      // Save the last state in service
+      this.recipeService.lastQuery = this.query;
+      this.recipeService.lastResults = data;
     });
+  }
+
+  ngOnInit() {
+    // Restore last state when coming back
+    if (this.recipeService.lastResults.length > 0) {
+      this.query = this.recipeService.lastQuery;
+      this.recipes = this.recipeService.lastResults;
+    }
   }
 
   onSearchChange(value: string) {

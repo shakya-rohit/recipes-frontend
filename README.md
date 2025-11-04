@@ -21,6 +21,7 @@ It allows users to **search recipes**, view **suggestions dynamically** (typeahe
 - 🧭 **Full-page view** for extended recipe details
 - ⚡ Smooth animations and subtle UI effects
 - ⌨️ **Keyboard navigation support** — navigate search results using arrow keys and press Enter to open recipe details (auto-scrolls into view)
+- 🕘 **Persistent search state** — retains last query and results when returning from recipe details for smoother UX
 
 ---
 
