@@ -17,6 +17,33 @@ It allows users to **search recipes**, view **suggestions dynamically** (typeahe
 
 ---
 
+## 🖼️ UI Screenshots
+
+### 🔍 Search Screen
+Search for recipes dynamically with highlighted results.
+
+| Typing Search | Search Results |
+|---------------|----------------|
+| ![Search screen 1](screenshots/search-screen-1.png) | ![Search screen 2](screenshots/search-screen-2.png) |
+
+---
+
+### 🍲 Recipe Modal
+Quick view of a recipe with essential details.
+
+![Recipe Modal](screenshots/recipe-modal-1.png)
+
+---
+
+### 📖 Full Recipe Details
+Explore complete recipe details, including ingredients, instructions, and ratings.
+
+| Example 1 | Example 2 |
+|------------|------------|
+| ![Recipe Full Details 1](screenshots/recipe-full-details-1.png) | ![Recipe Full Details 2](screenshots/recipe-full-details-2.png) |
+
+---
+
 ## 🏗️ Tech Stack
 
 | Layer | Technology |

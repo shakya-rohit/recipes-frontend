@@ -93,3 +93,22 @@
   font-size: 0.9rem;
   margin-top: 8px;
 }
+
+.recipe-thumb {
+  width: 40px;
+  height: 40px;
+  border-radius: 6px;
+  object-fit: cover;
+  background-color: #f3f3f3;
+  
+  /* Start blurred + transparent */
+  filter: blur(8px);
+  opacity: 0;
+  transition: filter 0.6s ease-out, opacity 0.6s ease-out;
+}
+
+/* When the image finishes loading */
+.recipe-thumb:not([src=""]) {
+  filter: blur(0);
+  opacity: 1;
+}

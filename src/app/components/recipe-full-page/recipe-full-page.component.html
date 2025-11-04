@@ -28,6 +28,15 @@
       <mat-icon color="warn">local_fire_department</mat-icon>
       <span><strong>Calories:</strong> {{ recipe.caloriesPerServing || '-' }}</span>
     </div>
+
+    <!-- ⭐ Rating + Reviews -->
+    <div class="info-row rating-row">
+      <mat-icon color="accent">star</mat-icon>
+      <span>
+        <strong>{{ recipe.rating || 'N/A' }}</strong>
+        <small class="review-count">({{ recipe.reviewCount || 0 }} reviews)</small>
+      </span>
+    </div>
   </div>
 
   <mat-divider></mat-divider>

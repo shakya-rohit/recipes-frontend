@@ -65,12 +65,13 @@
   transform: scale(1.1);
 }
 
-/* Content */
+/* Info Section */
 .content-section {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
   padding: 20px;
+  /* border-bottom: 1px solid #eee; */
 }
 
 .info-row {
@@ -79,6 +80,16 @@
   gap: 8px;
   margin: 6px 0;
   color: #333;
+}
+
+.rating-row mat-icon {
+  color: #fbc02d !important; /* Gold star */
+}
+
+.review-count {
+  color: #777;
+  font-size: 0.85rem;
+  margin-left: 4px;
 }
 
 .section {

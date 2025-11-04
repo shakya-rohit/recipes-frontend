@@ -10,7 +10,7 @@
   <!-- Suggestions list -->
   <ul class="suggestions" *ngIf="recipes.length > 0">
     <li *ngFor="let r of recipes" (click)="openDetails(r)">
-      <img [src]="r.image" alt="{{r.name}}" width="40" height="40">
+      <img [src]="r.image" alt="{{r.name}}" width="40" height="40" loading="lazy" class="recipe-thumb">
       <div class="details">
         <div class="line1">
           <strong>{{ r.id }}</strong>&nbsp;&nbsp;
