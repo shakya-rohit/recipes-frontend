@@ -112,3 +112,8 @@
   filter: blur(0);
   opacity: 1;
 }
+
+.suggestions li.selected {
+  background-color: #e8eaf6;
+  border-left: 3px solid #3f51b5;
+}

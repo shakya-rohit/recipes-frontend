@@ -6,6 +6,12 @@ It allows users to **search recipes**, view **suggestions dynamically** (typeahe
 
 ---
 
+### 🎥 Demo
+
+![Recipe Finder Demo](./screenshots/demo.gif)
+
+---
+
 ## 🚀 Features
 
 - 🔍 **Dynamic search bar** with typeahead and debounce (min 3 characters)
@@ -14,6 +20,7 @@ It allows users to **search recipes**, view **suggestions dynamically** (typeahe
 - 📜 **Recipe details modal** with clean overlay design
 - 🧭 **Full-page view** for extended recipe details
 - ⚡ Smooth animations and subtle UI effects
+- ⌨️ **Keyboard navigation support** — navigate search results using arrow keys and press Enter to open recipe details (auto-scrolls into view)
 
 ---
 
@@ -38,7 +45,7 @@ Quick view of a recipe with essential details.
 ### 📖 Full Recipe Details
 Explore complete recipe details, including ingredients, instructions, and ratings.
 
-| Example 1 | Example 2 |
+| 50% Zoom View | 67% Zoom View |
 |------------|------------|
 | ![Recipe Full Details 1](screenshots/recipe-full-details-1.png) | ![Recipe Full Details 2](screenshots/recipe-full-details-2.png) |
 
